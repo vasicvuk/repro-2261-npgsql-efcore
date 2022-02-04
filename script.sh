@@ -15,3 +15,5 @@ echo "Executing .NET 6.0"
 docker run --rm --network sample -e "DATABASE_TYPE=Postgres" -e "DATABASE_HOST=some-postgres" -e "DATABASE_PORT=5432" -e "DATABASE_NAME=sample" -e "DATABASE_USER=sample" -e "DATABASE_PASS=sample" --name sample6 sample6
 
 docker rm some-postgres -f
+
+docker network rm sample
