@@ -1,0 +1,9 @@
+﻿FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+WORKDIR /src
+COPY ./* /src/
+RUN rm -rf bin obj Debug global.json
+RUN dotnet publish -c Release -o out -f net6.0
+
+FROM mcr.microsoft.com/dotnet/runtime:6.0-alpine
+COPY --from=build /src/out .
+ENTRYPOINT ["dotnet", "PostgreEFCorePerfTest.dll"]

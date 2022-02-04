@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "PostgreEFCorePerfTest": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DATABASE_TYPE": "Postgres",
+        "DATABASE_HOST": "localhost",
+        "DATABASE_PORT": "5432",
+        "DATABASE_NAME": "sample",
+        "DATABASE_USER": "sample",
+        "DATABASE_PASS": "sample"
+      }
+    }
+  }
+}
